@@ -1,116 +1,168 @@
-.container {
-  padding: 0 2rem;
+.home {
+  min-height: 100vh;
+  background: url("../public/image/home.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.main {
+.home h1{
+  color: whitesmoke;
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+}
+.home p{
+  color: whitesmoke;
+  font-size: 2em;
+  margin-top: 0;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+}
+.whatsBtn{
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  cursor: pointer;
+}
+.secondPage{
   min-height: 100vh;
-  padding: 4rem 0;
+  display: flex;
+  flex-direction: row;
+}
+.ulSecondPage{
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ulSecondPage ul{
+  list-style-type: none;
+}
+.ulSecondPage ul li{
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+.imagenSecondPage{
+  background: url("../public/image/second.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  flex: 1
+}
+.handLi{
+  margin-right: 1em;
+}
+.btnSecond{
+  background-color: #25a0c0;
+  border: 1px solid #25a0c0;
+  color: whitesmoke;
+  padding: 1em;
+  font-size: 1.2em;
+  border-radius: 20px;
+}
+.ulSecondPage button:hover{
+  color: grey;
+  background-color: whitesmoke;
+}
+.thirdPage{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column
+}
+.titleThirdPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  font-size: 2em;
+  font-weight: 500;
+  color: #25a0c0
+}
+.options{
+  max-width: 1440px;
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: 'row';
+  padding-top: 2em;
+  flex-wrap: wrap;
+}
+.card{
+  border: solid 2px black;
+  border-radius: 20px;
+  padding: 0 1em;
+  margin: 1em 2em 1em 2em;
+  max-width: 200px;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+}
+.iconCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+.textCard{
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.footer{
+  background-color: black;
+  padding: 2em 0
+}
+.contentFooter{
+  display: flex;
+  flex-direction: column;
+}
+.socialFooter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contactFooter{
+  color: whitesmoke;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 1em;
 }
-
-.footer {
+.share{
   display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 }
-
-.footer a {
+.textShare{
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  margin: 1em 0
 }
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
+@media (max-width: 800px){
+  .secondPage{
     flex-direction: column;
   }
+  .ulSecondPage{
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .imagenSecondPage{
+    max-height: 300px;
+  }
 }
+
+
