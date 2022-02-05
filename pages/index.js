@@ -83,7 +83,7 @@ export default function Home() {
         </div>
         <div className={styles.options}>
           {cards.map((card, index) => { return(
-            <div className={styles.card}>
+            <div className={styles.card} key={index}>
               <div className={styles.iconCard}>
                 {card.icon}
               </div>
