@@ -3,8 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Button } from 'antd'
 import {BsWhatsapp, BsTwitter} from 'react-icons/bs'
-import {FaRegHandPointRight, FaHandshake} from 'react-icons/fa'
-import {GiCarousel, GiHouse} from 'react-icons/gi'
+import {FaRegHandPointRight, FaHandshake, FaPhotoVideo} from 'react-icons/fa'
+import {GiTeamIdea, GiHouse} from 'react-icons/gi'
 import {AiOutlineForm, AiOutlineFacebook} from 'react-icons/ai'
 import {MdHttp, MdOutlineSupportAgent} from 'react-icons/md'
 import {
@@ -15,6 +15,8 @@ import {
   TwitterIcon,
   WhatsappIcon
 } from "react-share";
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 const shareUrl = 'https://beltranweb.tk'
 const title = "Te recomiendo esta página para hacer tu sitio web"
@@ -22,7 +24,7 @@ const title = "Te recomiendo esta página para hacer tu sitio web"
 export default function Home() {
   var cards = [
     {
-      icon: <GiCarousel color="#25a0c0" size={80}/>,
+      icon: <FaPhotoVideo color="#25a0c0" size={80}/>,
       text: 'Carruseles de imágenes'
     },
     {
@@ -46,12 +48,12 @@ export default function Home() {
       text: 'Boton WhatsApp'
     },
     {
-      icon: <FaHandshake color="#25a0c0" size={80}/>,
+      icon: <GiTeamIdea color="#25a0c0" size={80}/>,
       text: 'Acompañamiento en todo momento'
     },
     {
       icon: <MdOutlineSupportAgent color="#25a0c0" size={80}/>,
-      text: 'Administración desde 60.000 al mes'
+      text: 'Administración desde $20 al mes'
     }
   ]
   return (
@@ -65,12 +67,14 @@ export default function Home() {
       </div>
       <div className={styles.secondPage}>
         <div className={styles.ulSecondPage}>
-          <ul>
-            <li><FaRegHandPointRight className={styles.handLi} color="#25a0c0" />Páginas adaptables a vista Móvil, de Tablet y de Computadores.</li>
-            <li><FaRegHandPointRight className={styles.handLi} color="#25a0c0" />Diseños personalizados.</li>
-            <li><FaRegHandPointRight className={styles.handLi} color="#25a0c0" />Alta velocidad de carga.</li>
-            <li><FaRegHandPointRight className={styles.handLi} color="#25a0c0" />Amigable con SEO.</li>
-          </ul>
+          <Zoom cascade>
+            <ul>
+              <li><FaRegHandPointRight className={styles.handLi} color="#25a0c0" />Páginas adaptables a vista Móvil, de Tablet y de Computadores.</li>
+              <li><FaRegHandPointRight className={styles.handLi} color="#25a0c0" />Diseños personalizados.</li>
+              <li><FaRegHandPointRight className={styles.handLi} color="#25a0c0" />Alta velocidad de carga.</li>
+              <li><FaRegHandPointRight className={styles.handLi} color="#25a0c0" />Amigable con SEO.</li>
+            </ul>
+          </Zoom>
           <a href="http://wa.me/+573013479980" className={styles.btnSecond}>Contáctanos</a>
         </div>
         <div className={styles.imagenSecondPage}>
@@ -79,19 +83,21 @@ export default function Home() {
       </div>
       <div className={styles.thirdPage}>
         <div className={styles.titleThirdPage}>
-          Páginas desde $700.000
+          Páginas desde $200
         </div>
         <div className={styles.options}>
-          {cards.map((card, index) => { return(
-            <div className={styles.card} key={index}>
-              <div className={styles.iconCard}>
-                {card.icon}
+          <Fade bottom cascade>
+            {cards.map((card, index) => { return(
+              <div className={styles.card} key={index}>
+                <div className={styles.iconCard}>
+                  {card.icon}
+                </div>
+                <div className={styles.textCard}>
+                  {card.text}
+                </div>
               </div>
-              <div className={styles.textCard}>
-                {card.text}
-              </div>
-            </div>
-          )})}
+            )})}
+          </Fade>
         </div>
       </div>
       <div className={styles.footer}>
