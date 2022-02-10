@@ -58,6 +58,18 @@ export default function Home() {
   ]
   return (
     <div>
+      <div>
+        <Head>
+          <title>Beltran Web</title>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="description" content="La tranquilidad no es negociable, diseñamos, creamos y administramos tu página web, contáctanos" />
+          <meta name="keywords" content="paginas web, administracion paginas web, paginas web baratas" />
+          <meta name="author" content="Ernesto Beltrán" />
+          <meta name="copyright" content="Ernesto Beltrán" />
+          <meta name="robots" content="index"/>
+        </Head>
+      </div>
       <div className={styles.home}>
         <h1>La tranquilidad NO es negociable</h1>
         <p>Diseñamos, creamos y administramos su sitio web</p>
