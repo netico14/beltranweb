@@ -71,7 +71,7 @@ export default function Home() {
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+            src="https://www.googletagmanager.com/gtag/js?id=UA-219954082-1"
           />
           <script
             dangerouslySetInnerHTML={{
@@ -79,7 +79,7 @@ export default function Home() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            gtag('config', 'UA-219954082-1', {
               page_path: window.location.pathname,
             });
           `,
